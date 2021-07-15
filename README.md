@@ -19,22 +19,18 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.svg" alt="Logo">
   </a>
-
-  <h3 align="center">Best-README-Template</h3>
-
+  <!--
+  <h3 align="center">CAD-COVID 19</h3>
+  -->
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Auxiliando o combate do COVID-19
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="http://www.cadcovid19.dcc.ufmg.br/">View Project Website</a>
   </p>
 </p>
 
@@ -58,8 +54,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
