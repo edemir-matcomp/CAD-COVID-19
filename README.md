@@ -165,16 +165,17 @@ Project Website: [http://www.cadcovid19.dcc.ufmg.br/](http://www.cadcovid19.dcc.
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgments
 
-* Organização Latino-Americana e do Caribe de Entidades Fiscalizadoras Superiores (OLACEFS)
+* Fundação de Amparo a Pesquisa do Estado de Minas Gerais - FAPEMIG - APQ-00519-20
 
 ## Authors
 
+* **Camila Laranjeira** - [edemir-matcomp](https://github.com/edemir-matcomp)
 * **Cristiano Rodrigues** - [edemir-matcomp](https://github.com/edemir-matcomp)
 * **Diego Campos** - [edemir-matcomp](https://github.com/edemir-matcomp)
 * **Edemir Ferreira** - [edemir-matcomp](https://github.com/edemir-matcomp)
 * **Ester Fiorillo** - [esterfiorillo](https://github.com/esterfiorillo)
 * **Hugo Oliveira** - [edemir-matcomp](https://github.com/edemir-matcomp)
-* **Marcos** - [edemir-matcomp](https://github.com/edemir-matcomp)
+* **Marcos Vendramini** - [edemir-matcomp](https://github.com/edemir-matcomp)
 
 
 
