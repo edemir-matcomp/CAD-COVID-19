@@ -53,7 +53,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage-instructions">Usage Instructions</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -102,7 +102,7 @@ Docker Engine: https://docs.docker.com/engine/install/ubuntu/#install-using-the-
 Nvidia-Docker (for gpu support)
 ```
 
-### Installing
+### Installation
 
 ```
 # Docker installing steps
@@ -135,7 +135,7 @@ docker run -it --gpus all --ipc=host --name=olacef_container -w /home -v /home:/
 docker run -it --ipc=host --name=olacef_container -w /home -v /home:/home edemirfaj/patreo_bot:gpu-py3 bash
 ```
 
-### Instructions
+### Usage Instructions
 
 Detailed instructions for each of the project deliveries are in their respective folders
               
