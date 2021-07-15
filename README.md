@@ -170,7 +170,7 @@ Project Website: [http://www.cadcovid19.dcc.ufmg.br/](http://www.cadcovid19.dcc.
 ## Authors
 
 * **Cristiano** - [edemir-matcomp](https://github.com/edemir-matcomp)
-* **Diego** - [edemir-matcomp](https://github.com/edemir-matcomp)
+* **Diego Campos** - [edemir-matcomp](https://github.com/edemir-matcomp)
 * **Edemir Ferreira** - [edemir-matcomp](https://github.com/edemir-matcomp)
 * **Ester Fiorillo** - [esterfiorillo](https://github.com/esterfiorillo)
 * **Hugo Oliveira** - [edemir-matcomp](https://github.com/edemir-matcomp)
