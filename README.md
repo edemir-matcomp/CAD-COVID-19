@@ -16,23 +16,19 @@
 
 
 <!-- PROJECT LOGO -->
+
+# Auxiliando o combate do COVID-19
+
+<!--
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.svg" alt="Logo">
   </a>
-  <!--
-  <h3 align="center">CAD-COVID 19</h3>
-  -->
-  <p align="center">
-    Auxiliando o combate do COVID-19
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="http://www.cadcovid19.dcc.ufmg.br/">View Project Website</a>
-  </p>
 </p>
+
+O projeto CADCOVID-19 tem a proposta de oferecer um sistema online para auxiliar no diagnóstico da COVID-19 utilizando técnicas de inteligência artificial e visão computacional.
+-->
 
 
 
