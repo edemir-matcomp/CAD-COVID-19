@@ -145,11 +145,14 @@ docker run -it --ipc=host --name=olacef_container -w /home -v /home:/home edemir
 
 Detailed instructions for each of the project deliveries are in their respective folders
               
-1. **1_Script_GEE** - [1_Script_GEE](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/1_Script_GEE), [COLAB](https://colab.research.google.com/drive/1exOeSfbCkI0fIIj7hMdhyeY2A3qOiiSd)
-2. **2_Classification** - [2_Classification](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/2_Classification), [COLAB](https://colab.research.google.com/drive/1bEPgqvYJpsCkspix5ivOy-yCkjoUu_vP?usp=sharing)
-3. **3_Script_GEE_Desmatamento** - [3_Script_GEE_Desmatamento](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/3_Script_GEE_Desmatamento), [COLAB](https://colab.research.google.com/drive/1gUg_rQLjoGIvsHHUu8LwdGkM0gf0uljo?usp=sharing)
-4. **4_Change_Detection** - [4_Change_Detection](https://github.com/edemir-matcomp/OLACEFS_DAM/blob/master/4_Change_Detection/README.md), [COLAB](https://colab.research.google.com/drive/1SWAh0ImS5b7HvX9-e9WpjEUuKG8vZArl?usp=sharing)
+1. **Auxílio a Diagnóstico de Lesões Pulmonares** - [1_Diagnostic_Aid](https://github.com/edemir-matcomp/CAD-COVID-19/tree/master/1_Diagnostic_Aid), [COLAB](https://colab.research.google.com)
+2. **Segmentação Semântica de Pulmões** - [2_Lung_Segmentation](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/2_Lung_Segmentation), [COLAB](https://colab.research.google.com)
+3. **Detecção de Lesões Pulmonares** - [3_Lesion_Detection](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/3_Lesion_Detection), [COLAB](https://colab.research.google.com)
 
+<!-- DISCLAIMER -->
+## Disclaimer
+
+This api-rest and accompanying pretrained models are provided with no guarantees regarding their reliability, accuracy or suitability for any particular application and should be used for research purposes only. The models and code are not to be used for public health decisions or responses, or for any clinical application or as a substitute for medical advice or guidance.
 
 <!-- LICENSE -->
 ## License
