@@ -135,7 +135,7 @@ docker run -it --gpus all --ipc=host --name=olacef_container -w /home -v /home:/
 docker run -it --ipc=host --name=olacef_container -w /home -v /home:/home edemirfaj/patreo_bot:gpu-py3 bash
 ```
 
-### Usage Instructions
+## Usage Instructions
 
 Detailed instructions for each of the project deliveries are in their respective folders
               
