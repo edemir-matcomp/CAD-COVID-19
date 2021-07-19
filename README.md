@@ -63,30 +63,28 @@ O projeto CADCOVID-19 tem a proposta de oferecer um sistema online para auxiliar
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The proposal of the CADCOVID-19 project is to provide health professionals with a system capable of assisting the diagnosis of pulmonary diseases from images, focusing on cases related to the outbreak of COVID-19. Its main objective is to offer an online system for the centralization of x-ray and tomography data of patients diagnosed with COVID-19 or suspected cases.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+With the aid of computer vision and artificial intelligence algorithms, the system will allow researchers and health professionals to upload medical images, which will be integrated into the repository. From these images a report will be generated with proprieties extracted from them, in order to assist the diagnosis of lung diseases.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+In this specific repository, you will find the source codes for the following tasks: 
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+* **Auxílio a Diagnóstico de Lesões Pulmonares** - [1_Diagnostic_Aid](https://github.com/edemir-matcomp/CAD-COVID-19/tree/master/1_Diagnostic_Aid)
+* **Segmentação Semântica de Pulmões** - [2_Lung_Segmentation](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/2_Lung_Segmentation)
+* **Detecção de Lesões Pulmonares** - [3_Lesion_Detection](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/3_Lesion_Detection)
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+This section shows a list of the major frameworks that was used to built this project
 
+* [Pytorch](https://pytorch.org/)
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/#)
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
+These are instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -125,10 +123,10 @@ sudo reboot
 
 ```
 # With GPU support
-docker run -it --gpus all --ipc=host --name=olacef_container -w /home -v /home:/home edemirfaj/patreo_bot:gpu-py3 bash
+docker run -it --gpus all --ipc=host --name=cadcovid_container -w /home -v /home:/home edemirfaj/patreo_bot:gpu-py3 bash
 
 # Without GPU support
-docker run -it --ipc=host --name=olacef_container -w /home -v /home:/home edemirfaj/patreo_bot:gpu-py3 bash
+docker run -it --ipc=host --name=cadcovid_container -w /home -v /home:/home edemirfaj/patreo_bot:gpu-py3 bash
 ```
 
 ## Usage Instructions
@@ -153,7 +151,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Jefersson Alex - [Website](https://homepages.dcc.ufmg.br/~jefersson/) - jeferssonalex@gmail.com 
 
 Project Website: [http://www.cadcovid19.dcc.ufmg.br/](http://www.cadcovid19.dcc.ufmg.br/)
 
