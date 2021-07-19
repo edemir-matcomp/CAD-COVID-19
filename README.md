@@ -53,6 +53,7 @@ O projeto CADCOVID-19 tem a proposta de oferecer um sistema online para auxiliar
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#authors">Authors</a></li>
   </ol>
 </details>
 
