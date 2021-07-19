@@ -164,14 +164,14 @@ Project Website: [http://www.cadcovid19.dcc.ufmg.br/](http://www.cadcovid19.dcc.
 * Fundação de Amparo a Pesquisa do Estado de Minas Gerais - FAPEMIG - APQ-00519-20
 
 ## Authors
-
-* **Camila Laranjeira** - [edemir-matcomp](https://github.com/edemir-matcomp)
-* **Cristiano Rodrigues** - [edemir-matcomp](https://github.com/edemir-matcomp)
-* **Diego Campos** - [edemir-matcomp](https://github.com/edemir-matcomp)
+* **Alexei Machado** - [alexeimachado](https://github.com/alexeimachado)
+* **Camila Laranjeira** - [camilalaranjeira](https://github.com/camilalaranjeira)
+* **Cristiano Rodrigues** - [cristianorbh](https://github.com/cristianorbh)
+* **Diego Campos** - [diegohaji](https://github.com/diegohaji)
 * **Edemir Ferreira** - [edemir-matcomp](https://github.com/edemir-matcomp)
 * **Ester Fiorillo** - [esterfiorillo](https://github.com/esterfiorillo)
-* **Hugo Oliveira** - [edemir-matcomp](https://github.com/edemir-matcomp)
-* **Marcos Vendramini** - [edemir-matcomp](https://github.com/edemir-matcomp)
+* **Hugo Oliveira** - [hugo-oliveira](https://github.com/hugo-oliveira)
+* **Marcos Vendramini** - [marcosvendramini](https://github.com/marcosvendramini)
 
 
 
