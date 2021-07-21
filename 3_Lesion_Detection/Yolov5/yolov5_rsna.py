@@ -50,8 +50,10 @@ Image(filename='runs/detect/exp/zidane.jpg', width=600)
 """Results are saved to `runs/detect`. A full list of available inference sources:
 <img src="https://user-images.githubusercontent.com/26833433/98274798-2b7a7a80-1f94-11eb-91a4-70c73593e26b.jpg" width="900">
 
-##Copiando os arquivos##
+##Copiando os arquivos / Copying the files##
 **Não funciona se tentar baixar diretamente. É preciso baixar e subir para o drive e alterar o diretório abaixo**
+
+**Won't work if try to download directly. It's necessary to download the dataset and upload to the drive, then change the directory.**
 """
 
 # Download RSNA
@@ -71,17 +73,25 @@ https://www.rsna.org/education/ai-resources-and-training/ai-image-challenge/rsna
 
 """Não funciona se tentar baixar diretamente.
    É preciso baixar e subir para o drive e alterar o diretório abaixo.
+   Won't work if try to download directly. It's necessary to download the dataset and upload to the drive,
+   then change the directory.
 """
 
 """**Diretório a ser alterado**
-**"/content/drive/MyDrive/Mestrado/Projetos/Challenge Covid-19/RSNA/rsna-pneumonia-detection-challenge.zip"**
+
+**Directory to be changed**
 """
 
-!unzip -uq "/content/drive/MyDrive/Mestrado/Projetos/Challenge Covid-19/RSNA/rsna-pneumonia-detection-challenge.zip" -d "/content/RSNA/"
+!unzip -uq "Diretório do drive com o dataset / Drive directory with the dataset" -d "Diretório do colab com o dataset / Colab directory with the dataset"
 
-"""##Convertendo os valores das labels para o formato da yolo##"""
+"""##Convertendo os valores das labels para o formato da yolo / Converting the labels to yolo format##
+**Necessário alterar o diretório dos arquivos**
 
-DATA_DIR = "/content/RSNA/"
+**Necessary to change the files path**
+
+"""
+
+DATA_DIR = "(Diretório do colab com o dataset / Colab directory with the dataset)"
 
 train_dcm_dir = os.path.join(DATA_DIR, "stage_2_train_images")
 test_dcm_dir = os.path.join(DATA_DIR, "stage_2_test_images")
@@ -99,6 +109,11 @@ for directory in [img_dir, label_dir, metadata_dir, cfg_dir, backup_dir]:
     if os.path.isdir(directory):
         continue
     os.mkdir(directory)
+
+"""**Alterando o formato dos arquivos de dcm para png**
+
+**Changing the files format from dcm to png**
+"""
 
 def save_img_from_dcm(dcm_dir, img_dir, patient_id):
     img_fp = os.path.join(img_dir, "{}.png".format(patient_id))
@@ -155,6 +170,11 @@ def save_yolov3_data_from_rsna(dcm_dir, img_dir, label_dir, annots):
         save_label_from_dcm(label_dir, patient_id, row)
         save_img_from_dcm(dcm_dir, img_dir, patient_id)
 
+"""**Criando o arquivo com as informações sobre os dados**
+
+**Creating the file with the info on the data**
+"""
+
 annots = pd.read_csv(os.path.join(DATA_DIR, "stage_2_train_labels.csv"))
 annots.head()
 
@@ -162,7 +182,10 @@ save_yolov3_data_from_rsna(train_dcm_dir, img_dir, label_dir, annots)
 
 !du -sh images labels
 
-"""**Plotando uma sample**"""
+"""**Plotando uma amostra**
+
+**Ploting a sample**
+"""
 
 ex_patient_id = annots[annots.Target == 1].patientId.values[0]
 ex_img_path = os.path.join(img_dir, "{}.png".format(ex_patient_id))
@@ -181,7 +204,10 @@ with open(ex_label_path, "r") as f:
         h = rh*img_size
         plt.plot([x, x, x+w, x+w, x], [y, y+h, y+h, y, y])
 
-"""**Gerando um arquivo contendo os arquivos de treino e validação**"""
+"""**Gerando um arquivo contendo os arquivos de treino e validação**
+
+**Creating a file with the train and validation sets**
+"""
 
 random_stat = 123
 np.random.seed(random_stat)
@@ -204,7 +230,10 @@ write_train_list(metadata_dir, img_dir, "tr_list.txt", tr_series)
 # validation image path list
 write_train_list(metadata_dir, img_dir, "val_list.txt", val_series)
 
-"""**Criando o conjunto de teste**"""
+"""**Criando o conjunto de teste**
+
+**Creating the test set**
+"""
 
 def save_yolov3_test_data(test_dcm_dir, img_dir, metadata_dir, name, series):
     list_fp = os.path.join(metadata_dir, name)
@@ -219,29 +248,22 @@ test_dcm_fps = pd.Series(test_dcm_fps).apply(lambda dcm_fp: dcm_fp.strip().split
 
 save_yolov3_test_data(test_dcm_dir, img_dir, metadata_dir, "te_list.txt", test_dcm_fps)
 
-"""**Plotando uma sample de teste**"""
+"""**Plotando uma amostra de teste**
+
+**Ploting a test sample**
+"""
 
 ex_patient_id = test_dcm_fps[0]
 ex_img_path = os.path.join(img_dir, "{}.png".format(ex_patient_id))
 
 plt.imshow(cv2.imread(ex_img_path))
 
-!zip -r /content/yolov5/images.zip /content/yolov5/images/
+"""##Alterando o arquivo de configurações para o número de classes corretas / Changing the config file the the correct number of classes##
 
-!zip -r /content/yolov5/labels.zip /content/yolov5/labels
+**Necessário alterar o diretório dos arquivos**
 
-!zip -r /content/yolov5/metadados.zip /content/yolov5/metadata/
-
-from google.colab import files
-files.download("/content/yolov5/images.zip")
-
-files.download("/content/yolov5/labels.zip")
-
-files.download("/content/yolov5/metadados.zip")
-
-!rm -r "/content/RSNA"
-
-"""##Alterando o arquivo de configurações para o número de classes corretas##"""
+**Necessary to change the files path**
+"""
 
 contents = '''
 
@@ -257,9 +279,9 @@ contents = '''
 #download: bash data/scripts/get_coco.sh
 
 # train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
-train: /content/yolov5/metadata/tr_list.txt  # 118287 images
-val: /content/yolov5/metadata/val_list.txt  # 5000 images
-test: /content/yolov5/metadata/te_list.txt  # 20288 of 40670 images
+train: (Diretório do colab com o dataset / Colab directory with the dataset) /yolov5/metadata/tr_list.txt  # 118287 images
+val:  (Diretório do colab com o dataset / Colab directory with the dataset) /yolov5/metadata/val_list.txt  # 5000 images
+test: (Diretório do colab com o dataset / Colab directory with the dataset) /yolov5/metadata/te_list.txt  # 20288 of 40670 images
 
 # number of classes
 nc: 1
@@ -274,11 +296,16 @@ names: [ 'pneumonia' ]
 #     print(i, x)
 '''
 
-f = open('/content/yolov5/cfg/rsna.yaml','w')
+f = open('(Diretório do colab com o dataset / Colab directory with the dataset) /yolov5/cfg/rsna.yaml','w')
 f.write(contents)
 f.close()
 
-"""##Alterando o arquivo de treino##"""
+"""##Alterando o arquivo de treino / Changing the training file##
+
+**Necessário alterar o diretório do arquivo**
+
+**Necessary to change the file path**
+"""
 
 content  = '''
 # parameters
@@ -330,29 +357,27 @@ head:
    [[17, 20, 23], 1, Detect, [nc, anchors]],  # Detect(P3, P4, P5)
   ]
 '''
-f = open('/content/yolov5/cfg/rsna_cfg.yaml','w')
+f = open('(Diretório do colab com o dataset / Colab directory with the dataset) /yolov5/cfg/rsna_cfg.yaml','w')
 f.write(content)
 f.close()
 
-"""##Treinando##"""
+"""##Treinando / Training##"""
 
-!python train.py --img 320 --batch 48 --epochs 100 --data /content/yolov5/cfg/rsna.yaml --weights '' --cfg /content/yolov5/cfg/rsna_cfg.yaml --cache --adam --linear-lr
+!python train.py --img 320 --batch 48 --epochs 100 --data (Diretório do colab com o dataset / Colab directory with the dataset) /yolov5/cfg/rsna.yaml --weights '' --cfg (Diretório do colab com o dataset / Colab directory with the dataset) /yolov5/cfg/rsna_cfg.yaml --cache --adam --linear-lr
 
-!cp -r "/content/yolov5/runs/train/exp" "/content/drive/MyDrive/Mestrado/Projetos/Challenge Covid-19/RSNA/Teste_10-03_Scratch"
+!cp -r "(Diretório do colab com o dataset / Colab directory with the dataset) /yolov5/runs/train/exp" "(Diretório onde querem salvar os arquivos no drive  / Directory to save the files on Drive)"
 
-"""# 3. Visualize
-
-## Local Logging
+"""##Visualizando / Visualizing##
 
 All results are logged by default to `runs/train`, with a new experiment directory created for each new training as `runs/train/exp2`, `runs/train/exp3`, etc. View train and test jpgs to see mosaics, labels, predictions and augmentation effects. Note a **Mosaic Dataloader** is used for training (shown below), a new concept developed by Ultralytics and first featured in [YOLOv4](https://arxiv.org/abs/2004.10934).
 """
 
-#Image(filename='runs/train/exp3/train_batch0.jpg', width=800)  # train batch 0 mosaics and labels
-#Image(filename='runs/train/exp3/test_batch0_labels.jpg', width=800)  # test batch 0 labels
-Image(filename='runs/train/exp3/test_batch0_pred.jpg', width=800)  # test batch 0 predictions
+#Image(filename='runs/train/exp/train_batch0.jpg', width=800)  # train batch 0 mosaics and labels
+#Image(filename='runs/train/exp/test_batch0_labels.jpg', width=800)  # test batch 0 labels
+Image(filename='runs/train/exp/test_batch0_pred.jpg', width=800)  # test batch 0 predictions
 
-"""Training losses and performance metrics are also logged to [Tensorboard](https://www.tensorflow.org/tensorboard) and a custom `results.txt` logfile which is plotted as `results.png` (below) after training completes. Here we show YOLOv5s trained on COCO128 to 300 epochs, starting from scratch (blue), and from pretrained `--weights yolov5s.pt` (orange)."""
+"""Training losses and performance metrics are also logged to [Tensorboard](https://www.tensorflow.org/tensorboard) and a custom `results.txt` logfile which is plotted as `results.png` (below) after training completes. Here we show YOLOv5s trained on RSNA to 100 epochs, starting from scratch (blue), and from pretrained `--weights yolov5s.pt` (orange)."""
 
 from utils.plots import plot_results 
-plot_results(save_dir='runs/train/exp3')  # plot all results*.txt as results.png
-Image(filename='runs/train/exp3/results.png', width=800)
+plot_results(save_dir='runs/train/exp')  # plot all results*.txt as results.png
+Image(filename='runs/train/exp/results.png', width=800)
