@@ -39,8 +39,7 @@ multiples datasets
 """
 # diretorio dados
 
-#data_dir = "/mnt/DADOS_GRENOBLE_1/dataset_covid"
-data_dir = "/mnt/CADCOVID/dataset_covid_global"
+data_dir = "here_dataset_directory"
 
 """
 Read image filenames from the dataset folders
