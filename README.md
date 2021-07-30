@@ -74,8 +74,8 @@ With the aid of computer vision and artificial intelligence algorithms, the syst
 In this specific repository, you will find the source codes for the following tasks: 
 
 * **Auxílio a Diagnóstico de Lesões Pulmonares** - [1_Diagnostic_Aid](https://github.com/edemir-matcomp/CAD-COVID-19/tree/master/1_Diagnostic_Aid)
-* **Segmentação Semântica de Pulmões** - [2_Lung_Segmentation](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/2_Lung_Segmentation)
-* **Detecção de Lesões Pulmonares** - [3_Lesion_Detection](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/3_Lesion_Detection)
+* **Segmentação Semântica de Pulmões** - [2_Lung_Segmentation](https://github.com/edemir-matcomp/CAD-COVID-19/tree/master/2_Lung_Segmentation)
+* **Detecção de Lesões Pulmonares** - [3_Lesion_Detection](https://github.com/edemir-matcomp/CAD-COVID-19/tree/master/3_Lesion_Detection)
 
 ### Built With
 
@@ -138,8 +138,8 @@ docker run -it --ipc=host --name=cadcovid_container -w /home -v /home:/home edem
 Detailed instructions for each of the project deliveries are in their respective folders
               
 1. **Auxílio a Diagnóstico de Lesões Pulmonares** - [1_Diagnostic_Aid](https://github.com/edemir-matcomp/CAD-COVID-19/tree/master/1_Diagnostic_Aid)
-2. **Segmentação Semântica de Pulmões** - [2_Lung_Segmentation](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/2_Lung_Segmentation)
-3. **Detecção de Lesões Pulmonares** - [3_Lesion_Detection](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/3_Lesion_Detection)
+2. **Segmentação Semântica de Pulmões** - [2_Lung_Segmentation](https://github.com/edemir-matcomp/CAD-COVID-19/tree/master/2_Lung_Segmentation)
+3. **Detecção de Lesões Pulmonares** - [3_Lesion_Detection](https://github.com/edemir-matcomp/CAD-COVID-19/tree/master/3_Lesion_Detection)
 
 <!-- DISCLAIMER -->
 ## Disclaimer
