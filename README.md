@@ -6,12 +6,15 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
+<!--
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-<!--[![LinkedIn][linkedin-shield]][linkedin-url]-->
+[![LinkedIn][linkedin-shield]][linkedin-url]
+-->
 
 
 
@@ -52,7 +55,7 @@ O projeto CADCOVID-19 tem a proposta de oferecer um sistema online para auxiliar
     <li><a href="#usage-instructions">Usage Instructions</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#authors">Authors</a></li>
   </ol>
 </details>
@@ -134,9 +137,9 @@ docker run -it --ipc=host --name=cadcovid_container -w /home -v /home:/home edem
 
 Detailed instructions for each of the project deliveries are in their respective folders
               
-1. **Auxílio a Diagnóstico de Lesões Pulmonares** - [1_Diagnostic_Aid](https://github.com/edemir-matcomp/CAD-COVID-19/tree/master/1_Diagnostic_Aid), [COLAB](https://colab.research.google.com)
-2. **Segmentação Semântica de Pulmões** - [2_Lung_Segmentation](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/2_Lung_Segmentation), [COLAB](https://colab.research.google.com)
-3. **Detecção de Lesões Pulmonares** - [3_Lesion_Detection](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/3_Lesion_Detection), [COLAB](https://colab.research.google.com)
+1. **Auxílio a Diagnóstico de Lesões Pulmonares** - [1_Diagnostic_Aid](https://github.com/edemir-matcomp/CAD-COVID-19/tree/master/1_Diagnostic_Aid)
+2. **Segmentação Semântica de Pulmões** - [2_Lung_Segmentation](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/2_Lung_Segmentation)
+3. **Detecção de Lesões Pulmonares** - [3_Lesion_Detection](https://github.com/edemir-matcomp/OLACEFS_DAM/tree/master/3_Lesion_Detection)
 
 <!-- DISCLAIMER -->
 ## Disclaimer
