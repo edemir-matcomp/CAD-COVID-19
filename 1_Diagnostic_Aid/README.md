@@ -29,9 +29,9 @@ python googleEarthEngine.py
 
 Example of a tailing dam image extract from the years of 2016 to 2019 from sentinel and landsat satellites
 
--->
-
 ![](https://github.com/edemir-matcomp/OLACEFS_DAM/blob/master/1_Script_GEE/example_gee_sentinel_landsat.png)
+
+-->
 
 <!-- References -->
 ## References
