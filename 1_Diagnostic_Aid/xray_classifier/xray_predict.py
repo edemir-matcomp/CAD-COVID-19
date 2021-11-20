@@ -110,11 +110,11 @@ def load_sample(dataset, sample_path):
 
 def predict(dataset, arch, sample_path):
     
-    # instancia arquitetura 
+    # architecture instantiation
     net = getattr(models, arch)()
     net = adapt_net(net, arch, dataset_dict[dataset]['num_classes'])
     
-    # carrega modelo treinado
+    # load trained model
     model_path = f'{model_rootpath}/{dataset}_{arch}.pth' 
     states = torch.load(model_path, map_location=device)
     
@@ -122,7 +122,7 @@ def predict(dataset, arch, sample_path):
     net = net.to(device)
     net.eval()
     
-    # carrega imagem
+    # load image
     img = load_sample(dataset, sample_path)
     img = img.to(device)
     output = net(img) 
